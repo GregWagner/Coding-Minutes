@@ -1,0 +1,18 @@
+check if odd                    (x & 1) == 1
+check if even                   (x & 1) == 0
+
+get the ith bit                 n & (1<<i)
+clear the ith bit               n & (~(1<<i))
+set the ith bit                 n | (1<<i)
+update the ith bit              clear the bit, then or in the value
+
+clear last i bits               n & (-1<<i)
+clear range of bits (i to j)    
+    int a = -1<<(j + 1)         j bits of zeros
+    int b = (1<<i) - 1  
+    int mask = a | b
+    n &= mask
+
+Check if n is a power of 2      n & (n - 1) == 0 ? 'is' : 'is not'
+
+

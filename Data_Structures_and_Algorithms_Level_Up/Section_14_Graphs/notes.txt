@@ -1,0 +1,8 @@
+Graph Algorithms You need to know
+- Graph Traversals
+    - BFS
+    - DFS
+- Shortest Paths
+- Implicit Graphs (2D Matrices)
+- Problems
+

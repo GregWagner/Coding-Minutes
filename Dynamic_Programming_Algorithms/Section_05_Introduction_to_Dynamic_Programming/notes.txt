@@ -1,0 +1,20 @@
+DP = Recursion + Optimation:wq
+
+
+Steps 
+1) Form a state -> f(x, y, z...)
+2) Form a recursive relation (also called Optimal Substructure)
+3) Overlapping Subproblems
+    Once a solution to something is found, there is no need to 
+    solve it again and there are 2 ways to handle them:
+    1) Tabulation 
+        Fixed size/static
+        Do not go to any state twice
+    2) Memoization
+        Saving a solution and reusing it when the same problem occurs
+
+For example find the fibonacci number
+    state if f(n) -> nth fibonacci number
+    recursive relationship is:
+        f(n) = f(n - 1) + f(n - 2)
+

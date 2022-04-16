@@ -1,0 +1,12 @@
+Also see Data structures & algorithms essentials section 11
+
+Backtracking
+* Algorithmic technique
+* Recursively trying to build a solution
+* Searching the entire search space to solve a 
+  computation problem
+
+Problem Types
+- Decision Problems - check for feasible solution (yes or no)
+- Optimisation Problems - find best solution
+- Enumeration Problems - find all solutions

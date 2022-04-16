@@ -1,0 +1,24 @@
+Tries (also called prefix tree)
+Important DS for pattern matching problems
+- generic tree like DS
+- efficiennt information retrieval DS
+- search in optimal time P(key length) but uses extra storage
+
+Important operations
+- insert a new word
+- search for a given word
+
+each node can have multiple children
+
+Sample Problem - Prefix Trie
+Given a list of strings and Q queries, each query containing a word,
+you have to tell whether the word is contained in thee list or not.
+word[] {"apple", "ape", "mango", "news", "mo"}
+queries[] {"apple", "banna", "new", "mango"}
+
+output = Yes, No, No, Yes
+
+Brute force - O(n^2)
+BST - O(log n)
+Unordered map 
+Trie O(n)

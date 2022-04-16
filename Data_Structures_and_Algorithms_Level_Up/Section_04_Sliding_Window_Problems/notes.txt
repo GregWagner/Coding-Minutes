@@ -1,0 +1,12 @@
+There are 2 types of sliding window problems
+
+Type 1 - Fixed window length k
+The length of the window is fixed and it asks you to find something in the window such as
+the maximum sum of all windows, or the maximum or median number of each window. Usually, we
+need some kind of varaible to maintain the state of the window. Some are as simple as an 
+integer or as complicated as some advanced data structure such as list, queue, or deque.
+
+Type 2 - Two pointer + criteria
+The window size is not fixed and usually it asks you to find the subarry that meets the critera.
+For example, given an array of integers, find the number of subarrays whose sum is equal to a
+target value.

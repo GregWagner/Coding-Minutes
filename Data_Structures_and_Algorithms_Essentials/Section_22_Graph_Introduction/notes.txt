@@ -1,0 +1,43 @@
+Adjaceny List
+    Make a list of neighbors for each node (a list of lists)
+    0 => (1, 2, 3)
+    1 => (0, 2)
+    2 => (0, 1)
+    3 => (0)
+
+Adjacency Matrix
+    0   1   2   3
+0   1   0   1   0
+1   1   1   0   0
+2   1   1   0   0
+3   1   0   1   0
+Wastes space
+
+Edge List
+List of pairs or triplets
+Edges = {0, 1}, {0, 3}, {0, 2}}
+
+Implicit Graphs
+    4-way or 8-way
+
+Applications
+------------
+Shorest Paths
+    Google maps for navigating shortest paths, computing flight time
+Social Networks
+Shorest Cyclic Route (come back to starting location)
+    Min cost roud trip for school vans, amazon delivery vans
+Dependency graphs
+    Resolving dependencies on servers, sw installation
+Routing Algorithms
+Computation graphs (ML)
+Computer vision
+    Image segmentation, flood fill
+Web crawlers
+    Uses BFS to cral web
+    Web page is a DOM tree - a tree is a graph without a cycle
+Physics & chemistry
+    Atomic & molecular structre
+Graph Databases
+    Neo4j - used in recommendation engines, fraud detectionn & AI
+

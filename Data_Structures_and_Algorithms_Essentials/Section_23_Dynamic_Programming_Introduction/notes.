@@ -1,0 +1,13 @@
+Dynamic
+- DP is about remembering what you have solved in the past
+
+Overlapping Subproblems
+
+Top Down DP
+Starting building the big solution right away
+by explaining how you build it from smaller
+solutions.
+
+Bottom Up DP
+Start with small solutions and use the small
+solutions to build larger solutions.

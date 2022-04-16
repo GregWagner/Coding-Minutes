@@ -1,0 +1,8 @@
+Bipartite Graph
+
+- You can divide all vertices into 2 sets
+  such that all edges of the graph are from 
+  set1 to set2
+- Two coloring problem
+
+if there is a cycle and an odd number of nodes involved then it is not

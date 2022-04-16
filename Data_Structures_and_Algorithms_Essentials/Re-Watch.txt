@@ -1,0 +1,35 @@
+17-19   Subarry Sum
+32-33   Counting Sort
+38      Shortest Path
+47      Sprial Print
+48-49   Sorted Array Search
+50      Mango Trees
+68      Inbuilt Searching
+82      Count bits hack
+83      Fast Exponention
+93      Bubble Sort Recursively
+98      Merge Sort
+102     Rotated Array Search
+107     Finding Subsets (Pretty much all of backtracking)
+110     Permutations
+116     Sudoku Solver
+125     Merge Sort Analysis
+126     Time Complexity For Recursive Problems
+153     Insert at bootom of stack
+160     Implement Stack with 2 Queues
+167     Level Order Print
+172-174 Diameter of a binary tree
+180     Delete node BST
+181     Print in range
+190     Remove min/max Code - do homework
+192/193 Nearby Cars
+202     Hashing Code - implement erase() and isPresent()
+204     Webinar - watch this
+220     Topograpical Ordering using BFS (may not be working)
+221/222 Dijkshatra's algorithm
+228/229 Knapsack problem
+230-233 Wines (may be included in next course)
+
+Note:
+Redo all the exercises from scratch!!!
+Read notes in section_08 directory

@@ -1,0 +1,7 @@
+Flood Fill
+- Helps to visit each and every poinnt in a given area
+- Generally used for problems on matrices
+- Uses
+    Filling an area in paint
+    Maze probems where you can go in all directions (up, down, east, west)
+

@@ -1,0 +1,25 @@
+Single Source Shortest Path (SSSP)
+1) BFS
+    * Must be unweighted
+2) Dijkstra's
+    * Weighted Graphs
+    * Greedy Algorithm
+    * Doesn't wwork for graps with negative weight edges
+    * Uses priority queue or set
+3) Bellman Ford
+    * Weighted Graphs
+    * Works for graphs with negtive weight edges
+    * Algorithm
+        initialize distance array to infinity and dist[src] = 0\
+        Relax (update) all edges v-1 times {most important}
+        Negative weight cycle detection
+
+
+All-Pairs Shortest Path
+4) Floyd Warshall
+    * Dynamic Programming based algorthm
+    * Finds all pair shortest path
+    * Shortest between all paris of vertiices
+    * works with negative edges
+    * Can detect negative cycles too with one extra set
+    * DP based O(n^3)

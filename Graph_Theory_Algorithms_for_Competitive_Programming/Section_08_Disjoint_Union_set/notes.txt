@@ -1,0 +1,10 @@
+DSU Data Structure
+Disjoint Union Set
+
+1) Find     Find what set a value is located in
+2) Union    Combine 2 sets
+            O(n) but can be optimized using
+            1) union by rank (find function)
+                always attach smaller tree to bigger tree
+            2) path compression (union function)
+                
