@@ -18,7 +18,7 @@ void insertationSort(std::vector<T>& a) {
     for (size_t i {1}; i < a.size(); ++i) {
         int currentValue {a[i]};
         size_t j = i;
-        while (j > 0 && a[j - 1] > currentValue) {
+        while ((j > 0) && (a[j - 1] > currentValue)) {
            a[j] = a[j - 1];
            --j;
         }

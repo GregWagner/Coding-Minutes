@@ -15,17 +15,18 @@ std::vector<T> countingSort(const std::vector<T>& a) {
     }
 
     // use the largest element to create a new array
-    std::vector<T> frequency (largestNumber);
+    std::vector<T> frequency (largestNumber + 1);
     for (const auto& ele : a) {
         ++frequency[ele];
     }
 
     // put back the elements frem frequency into the answer
-    std::vector<T> answer;
+    std::vector<T> answer(a.size());
+    size_t index {};
     for (size_t i {}; i < frequency.size(); ++i) {
         if (frequency[i]) {
             while (frequency[i]--) {
-                answer.push_back(i);
+                answer[index++] = i;
             }
         } 
     }

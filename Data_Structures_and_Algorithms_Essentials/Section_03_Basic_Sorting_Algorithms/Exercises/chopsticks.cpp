@@ -2,13 +2,13 @@
  * Given N sticks and an array length when length[i] represents the
  * length of each stick. Your task is to make a maximum numbber of pairs
  * of thesee sticks such that the difference between the length of 2 
- * sticks is at most D. A stick can' be part of more than one pair of sticks.
+ * sticks is at most D. A stick can't be part of more than one pair of sticks.
  */
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
-int pairSticks(vector<int> length, int D) {
+int pairSticks(std::vector<int> &length, int D) {
     std::sort(begin(length), end(length));
 
     int count {};

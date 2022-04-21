@@ -2,7 +2,7 @@
 #include <vector>
 
 template <typename T>
-void bubbleSort(std::vector<T>& a) {
+std::vector<T> optimizedBubbleSort(std::vector<T> &a) {
     bool swapMade {true};
     size_t endingIndex {a.size() - 1};
     while (swapMade) {
@@ -15,6 +15,7 @@ void bubbleSort(std::vector<T>& a) {
         }
         --endingIndex;
     }
+    return a;
 }
 
 template <typename T>
@@ -27,6 +28,6 @@ void print(const std::vector<T> &a) {
 
 int main() {
     std::vector<int> a {6, 2, 7, 4, 8, 1, 3};
-    bubbleSort(a);
+    optimizedBubbleSort(a);
     print(a);
 }
