@@ -9,9 +9,9 @@ int firstUniqChar(const std::string &s) {
         (hash.find(c) == hash.end()) ? hash[c] = 1 : ++hash[c];
     }
 
-    for (size_t i {}; i < s.size(); ++i) {
+    for (size_t i{}; i < s.size(); ++i) {
         if (hash[s[i]] == 1) {
-            return  i;
+            return i;
         }
     }
     return -1;
