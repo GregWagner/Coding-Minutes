@@ -1,11 +1,10 @@
 /*
  * Give a matrix, print in Reverse Wave Form
  */
-
 #include <iostream>
 #include <vector>
 
-std::vector<int> print(int arr[][4], int n, int m) {
+std::vector<int> WavePrint(int m, int n, std::vector<std::vector<int>> arr) {
     int lastRow {n - 1};
     int col {m - 1};
     std::vector<int> result;
@@ -30,9 +29,17 @@ std::vector<int> print(int arr[][4], int n, int m) {
 }
 
 int main() {
-    int a[][4] = {{1, 2, 3, 4}, {5, 6, 7, 8},
+    std::vector<std::vector<int>> a {{1, 2, 3, 4}, {5, 6, 7, 8},
         {9, 10, 11, 12}, {13, 14, 15, 16}};
-    auto answer = print(a, 4, 4);
+    auto answer = WavePrint(4, 4, a);
+    for (const auto ele : answer) {
+        std::cout << ele << ' ';
+    }
+    std::cout << '\n';
+
+    std::vector<std::vector<int>> b {{1, 9, 4, 10}, {3, 6, 90, 11},
+        {2, 30, 85, 72}, {6, 31, 99, 15}};
+    answer = WavePrint(4, 4, b);
     for (const auto ele : answer) {
         std::cout << ele << ' ';
     }
