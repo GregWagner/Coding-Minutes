@@ -1,10 +1,11 @@
 17-19   Subarry Sum
 32-33   Counting Sort
-
 38      Shortest Path
 47      Sprial Print
-48-49   Sorted Array Search
-50      Mango Trees
+48-49   Sorted Array Search (Staircase Search)
+50      Mango Trees (2D Prefix Sum)
+           Coding Exercise 19
+
 68      Inbuilt Searching
 82      Count bits hack
 83      Fast Exponention
