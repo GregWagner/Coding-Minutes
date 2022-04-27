@@ -4,7 +4,7 @@ check if even                   (x & 1) == 0
 get the ith bit                 n & (1<<i)
 clear the ith bit               n & (~(1<<i))
 set the ith bit                 n | (1<<i)
-update the ith bit              clear the bit, then or in the value
+update the ith bit              clear the bit, then or that in with the orginal value
 
 clear last i bits               n & (-1<<i)
 clear range of bits (i to j)    
