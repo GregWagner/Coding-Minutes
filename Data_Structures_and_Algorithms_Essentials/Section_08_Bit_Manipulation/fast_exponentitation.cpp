@@ -10,8 +10,7 @@
 int fastExpo(int a, int n) {
     int answer {1};
     while (n) {
-        int last_bit = n & 1;
-        if (last_bit) {
+        if (n & 1) {
             answer *= a;
         }
         a *= a;    // square the number

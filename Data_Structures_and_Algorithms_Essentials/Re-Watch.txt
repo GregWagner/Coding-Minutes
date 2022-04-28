@@ -5,10 +5,16 @@
 48-49   Sorted Array Search (Staircase Search)
 50      Mango Trees (2D Prefix Sum)
            Coding Exercise 19
-
 68      Inbuilt Searching
+76      Update a bit
+77      Clear last n bits
+78      Clear range of bits
+79      Replace bits
+80      Is n a power of 2
 82      Count bits hack
 83      Fast Exponention
+84      Convert to binary
+
 93      Bubble Sort Recursively
 98      Merge Sort
 102     Rotated Array Search
