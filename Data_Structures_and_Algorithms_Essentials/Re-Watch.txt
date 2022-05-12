@@ -14,8 +14,8 @@
 82      Count bits hack
 83      Fast Exponention
 84      Convert to binary
-
 93      Bubble Sort Recursively
+
 98      Merge Sort
 102     Rotated Array Search
 107     Finding Subsets (Pretty much all of backtracking)
