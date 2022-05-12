@@ -1,22 +1,28 @@
 /*
  * Find the last occurence of an element in an array
+ *
+ * Check the subproblem first
  */
 #include <iostream>
-#include <vector>
 
-template <typename T>
-int last_occurence(std::vector<T> a, T key, int index) {
-    if (index < 0) {
-        return -1;
+int lastOccurance(int a[], int n, int key) {
+  if (n == 0) {
+    return -1;
+  }
+
+  int subIndex = lastOccurance(a + 1, n - 1, key);
+  if (subIndex == -1) {
+    if (a[0] == key) {
+      return 0;
     }
-    if (a[index] == key) {
-        return index;
-    }
-    return last_occurence(a, key, index - 1);
+    return -1;
+  }
+  return subIndex + 1;
 }
 
 int main() {
-    std::vector<int> a {1, 7, 5, 7, 6, 2};
-    int key {7};
-    std::cout << last_occurence(a, key, a.size() - 1) << '\n';
+  int a[]{1, 7, 5, 7, 6, 2};
+  int n = sizeof(a) / sizeof(int);
+  int key{7};
+  std::cout << lastOccurance(a, n, key) << '\n';
 }
