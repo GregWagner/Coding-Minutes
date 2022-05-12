@@ -16,9 +16,11 @@
 83      Fast Exponention
 84      Convert to binary
 93      Bubble Sort Recursively
+          Coding Exercise 31
 
-98      Merge Sort
-102     Rotated Array Search
+101     Merge Sort
+105     Rotated Array Search
+
 107     Finding Subsets (Pretty much all of backtracking)
 110     Permutations
 116     Sudoku Solver
