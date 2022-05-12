@@ -3,9 +3,9 @@
 
 template <typename T>
 void merge(std::vector<T> &a, int startingIndex, int endingIndex) {
-    int i {startingIndex};
-    int m {(startingIndex + endingIndex) / 2};
-    int j {m + 1};
+    int i{startingIndex};
+    int m{(startingIndex + endingIndex) / 2};
+    int j{m + 1};
 
     std::vector<T> temp;
 
@@ -26,7 +26,7 @@ void merge(std::vector<T> &a, int startingIndex, int endingIndex) {
     }
 
     // copy back to orginal array
-    for (int k {}, i {startingIndex}; i <= endingIndex; ++i, ++k) {
+    for (int k{}, i{startingIndex}; i <= endingIndex; ++i, ++k) {
         a[i] = temp[k];
     }
 }
@@ -45,7 +45,7 @@ void mergeSort(std::vector<T> &a, int startingIndex, int endingIndex) {
 }
 
 int main() {
-    std::vector<int> a {10, 5, 2, 0, 7, 6, 4};
+    std::vector<int> a{10, 5, 2, 0, 7, 6, 4};
     mergeSort(a, 0, a.size() - 1);
     for (auto const &ele : a) {
         std::cout << ele << ' ';
