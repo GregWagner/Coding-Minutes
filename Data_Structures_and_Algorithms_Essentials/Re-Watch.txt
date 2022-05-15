@@ -18,12 +18,14 @@
           Coding Exercise 31
 101     Merge Sort
 106     Rotated Array Search
+110     Finding Subsets (Pretty much all of backtracking)
+113     Permutations
+119     Sudoku Solver
+128     Merge Sort Analysis
+129     Time Complexity For Recursive Problems
+149     Reverse Link List
+        Coding Exercise 40
 
-107     Finding Subsets (Pretty much all of backtracking)
-110     Permutations
-116     Sudoku Solver
-125     Merge Sort Analysis
-126     Time Complexity For Recursive Problems
 153     Insert at bootom of stack
 160     Implement Stack with 2 Queues
 167     Level Order Print

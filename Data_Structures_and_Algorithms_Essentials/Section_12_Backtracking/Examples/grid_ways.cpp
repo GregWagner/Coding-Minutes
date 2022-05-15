@@ -21,7 +21,7 @@ int gridWays(int i, int j, int m, int n) {
     if (i == m - 1 && j == n - 1) {
         return 1;
     }
-    if (i >= m || j >= m) {
+    if (i >= m || j >= n) {
         return 0;
     }
     return gridWays(i + 1, j, n, m) + gridWays(i, j + 1, n, m);
