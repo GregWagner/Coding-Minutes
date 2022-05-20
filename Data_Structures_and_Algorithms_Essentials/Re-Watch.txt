@@ -25,11 +25,13 @@
 129     Time Complexity For Recursive Problems
 149     Reverse Link List
         Coding Exercise 40
+156     Insert at bottom of stack
+157     Reverse a stack
+158     Stock span
+163     Implement Stack with 2 Queues
+170     Level Order Print
+175-177 Diameter of a binary tree
 
-153     Insert at bootom of stack
-160     Implement Stack with 2 Queues
-167     Level Order Print
-172-174 Diameter of a binary tree
 180     Delete node BST
 181     Print in range
 190     Remove min/max Code - do homework
@@ -41,6 +43,6 @@
 228/229 Knapsack problem
 230-233 Wines (may be included in next course)
 
-Note:
+Also:
 Redo all the exercises from scratch!!!
 Read notes in section_08 directory

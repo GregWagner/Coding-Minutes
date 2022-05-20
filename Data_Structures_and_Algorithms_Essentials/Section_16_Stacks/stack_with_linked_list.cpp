@@ -1,41 +1,35 @@
 #include <iostream>
 
-template <typename T>
-class Node {
-    public:
-        explicit Node (T data): data{data}, next {} {}
+template <typename T> class Node {
+  public:
+    explicit Node(T data) : data{data}, next{} {}
 
-        T data;
-        Node<T> *next;
+    T data;
+    Node<T> *next;
 };
 
-template <typename T>
-class Stack {
-    public:
-        void push(T data) {
-            auto node = new Node<T>(data);
-            node->next = head;
-            head = node;
-        }
+template <typename T> class Stack {
+  public:
+    void push(T data) {
+        auto node = new Node<T>(data);
+        node->next = head;
+        head = node;
+    }
 
-        bool isEmpty() {
-            return head == nullptr;
-        }
+    bool isEmpty() { return head == nullptr; }
 
-        T top() {
-            return head->data;
-        }
+    T top() { return head->data; }
 
-        void pop() {
-            if (head) {
-                Node<T>* temp = head;
-                head = head->next;
-                delete temp;
-            }
+    void pop() {
+        if (head) {
+            Node<T> *temp = head;
+            head = head->next;
+            delete temp;
         }
+    }
 
-    private:
-        Node<T>* head {};
+  private:
+    Node<T> *head{};
 };
 
 int main() {

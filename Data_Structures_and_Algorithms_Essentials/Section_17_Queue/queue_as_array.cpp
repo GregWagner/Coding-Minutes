@@ -1,59 +1,53 @@
 #include <iostream>
 
 class Queue {
-    public:
-        Queue(int defaultSize = 5) : maxSize(defaultSize), rear{defaultSize - 1} {
-            arr = new int[maxSize];
+  public:
+    Queue(int defaultSize = 5) : maxSize(defaultSize), rear{defaultSize - 1} {
+        arr = new int[maxSize];
+    }
+
+    ~Queue() { delete[] arr; }
+
+    bool full() const { return currentSize == maxSize; }
+
+    bool empty() const { return currentSize == 0; }
+
+    void push(int data) {
+        if (full()) {
+            std::cerr << "Queue is full\n";
+            return;
         }
+        // move the rear pointer to the next index
+        rear = (rear + 1) % maxSize;
+        arr[rear] = data;
+        ++currentSize;
+    }
 
-        ~Queue() {
-            delete [] arr;
+    void pop() {
+        if (empty()) {
+            std::cerr << "Queue is empty\n";
+            return;
         }
+        // move the front pointer forward
+        front = (front + 1) % maxSize;
+        --currentSize;
+    }
 
-        bool full() const {
-            return currentSize == maxSize;
+    int getFront() {
+        if (empty()) {
+            std::cerr << "Queue is empty\n";
+            return -1;
         }
+        return arr[front];
+    }
 
-        bool empty() const {
-            return currentSize == 0;
-        }
+  private:
+    int *arr;
+    int currentSize{};
+    int maxSize{};
 
-        void push(int data) {
-            if (full()) {
-                std::cerr << "Queue is full\n";
-                return;
-            }
-            // move the rear pointer to the next index
-            rear = (rear + 1) % maxSize;
-            arr[rear] = data;
-            ++currentSize;
-        }
-
-        void pop() {
-            if (empty()) {
-                std::cerr << "Queue is empty\n";
-                return;
-            }
-            // move the front pointer forward
-            front = (front + 1) % maxSize;
-            --currentSize;
-        }
-
-        int getFront() {
-            if (empty()) {
-                std::cerr << "Queue is empty\n";
-                return -1;
-            }
-            return arr[front];
-        }
-
-    private:
-        int* arr;
-        int currentSize {};
-        int maxSize {};
-
-        int front {};
-        int rear {};
+    int front{};
+    int rear{};
 };
 
 int main() {

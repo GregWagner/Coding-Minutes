@@ -1,36 +1,26 @@
 #include <iostream>
 #include <vector>
 
-template <typename T>
-class Node {
-    public:
-        explicit Node (T data): data(data), next {} {}
+template <typename T> class Node {
+  public:
+    explicit Node(T data) : data(data), next{} {}
 
-        T data;
-        Node<T> *next;
+    T data;
+    Node<T> *next;
 };
 
-template <typename T>
-class Stack {
-    public:
-        void push(T data) {
-            head.emplace_back(data);
-        }
+template <typename T> class Stack {
+  public:
+    void push(T data) { head.emplace_back(data); }
 
-        bool isEmpty() {
-            return head.empty();
-        }
+    bool isEmpty() { return head.empty(); }
 
-        T top() {
-            return head.back();
-        }
+    T top() { return head.back(); }
 
-        void pop() {
-            head.pop_back();
-        }
+    void pop() { head.pop_back(); }
 
-    private:
-        std::vector<T> head;
+  private:
+    std::vector<T> head;
 };
 
 int main() {
@@ -45,4 +35,3 @@ int main() {
         stack.pop();
     }
 }
-
