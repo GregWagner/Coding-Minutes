@@ -9,6 +9,9 @@ struct Node {
     Node *left, *right;
 };
 
-std::vector<int> printKthLevel(Node *root, int k) { std::vector<int> answer; }
+std::vector<int> printKthLevel(Node* root, int k) {
+    std::vector<int> answer;
+}
 
-int main() {}
+int main() {
+}

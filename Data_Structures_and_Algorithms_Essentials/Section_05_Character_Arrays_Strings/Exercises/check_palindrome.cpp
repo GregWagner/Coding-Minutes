@@ -2,7 +2,7 @@
 
 bool isPalindrome(std::string str) {
     size_t left {};
-    size_t right {str.size() - 1};
+    size_t right { str.size() - 1 };
     while (left < right) {
         if (str[left++] != str[right--]) {
             return false;

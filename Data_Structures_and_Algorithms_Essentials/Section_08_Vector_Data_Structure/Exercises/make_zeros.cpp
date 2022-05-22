@@ -1,5 +1,5 @@
-#include <vector>
 #include <iostream>
+#include <vector>
 
 std::vector<std::vector<int>> makeZeroes(std::vector<std::vector<int>> arr) {
     std::vector<size_t> rows;
@@ -27,19 +27,17 @@ std::vector<std::vector<int>> makeZeroes(std::vector<std::vector<int>> arr) {
         }
     }
 
-
     return arr;
 }
 
 int main() {
-    std::vector<std::vector<int>> a {{5, 4, 3, 9}, 
-        {2, 0, 7, 6}, {1, 3, 4, 0}, {9, 8, 3, 4}};
+    std::vector<std::vector<int>> a { { 5, 4, 3, 9 },
+        { 2, 0, 7, 6 }, { 1, 3, 4, 0 }, { 9, 8, 3, 4 } };
     auto answer = makeZeroes(a);
-    for (const auto &s : answer) {
-        for (const auto &x : s) {
+    for (const auto& s : answer) {
+        for (const auto& x : s) {
             std::cout << x << ' ';
         }
         std::cout << '\n';
     }
-
 }

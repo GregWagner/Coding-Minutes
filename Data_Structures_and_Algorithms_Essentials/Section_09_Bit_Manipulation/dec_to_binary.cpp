@@ -2,7 +2,7 @@
 
 int convertToBinary(int n) {
     int answer {};
-    int power {1};
+    int power { 1 };
     while (n) {
         int last_bit = n & 1;
         answer += power * last_bit;
@@ -14,7 +14,8 @@ int convertToBinary(int n) {
 
 int main() {
 
-    int n {};;
+    int n {};
+    ;
     std::cin >> n;
     std::cout << convertToBinary(n) << '\n';
 }

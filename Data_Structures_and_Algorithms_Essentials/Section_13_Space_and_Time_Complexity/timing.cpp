@@ -4,19 +4,19 @@
 #include <vector>
 
 int main() {
-    int n{};
+    int n {};
     std::cin >> n;
 
     std::cout << "Enter the number of elements: ";
     std::vector<int> a(n);
 
-    for (int i{}; i < n; ++i) {
+    for (int i {}; i < n; ++i) {
         a[i] = n - i;
     }
 
-    auto start_time{clock()};
+    auto start_time { clock() };
     std::sort(begin(a), end(a));
-    auto end_time{clock()};
+    auto end_time { clock() };
 
     auto time = end_time - start_time;
     std::cout << "It took " << time << " clicks ("

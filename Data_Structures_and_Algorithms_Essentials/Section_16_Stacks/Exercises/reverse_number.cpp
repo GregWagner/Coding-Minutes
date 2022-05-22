@@ -9,7 +9,7 @@ int reverse(int n) {
     }
 
     int result {};
-    int mult {1};
+    int mult { 1 };
     while (!s.empty()) {
         int temp = s.top() * mult;
         result += temp;

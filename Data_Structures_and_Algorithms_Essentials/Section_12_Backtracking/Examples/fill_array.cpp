@@ -1,14 +1,14 @@
 #include <iostream>
 
-void printArray(int *a, int n) {
-    for (int i{}; i < n; ++i) {
+void printArray(int* a, int n) {
+    for (int i {}; i < n; ++i) {
         std::cout << a[i] << ' ';
     }
     std::cout << '\n';
 }
 
 // note a is shared accross all function calls
-void fillArray(int *a, int index, int n, int value) {
+void fillArray(int* a, int index, int n, int value) {
     // base case
     if (index == n) {
         printArray(a, n);

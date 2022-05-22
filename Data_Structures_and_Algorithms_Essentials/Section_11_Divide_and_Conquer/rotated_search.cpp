@@ -8,8 +8,8 @@
 #include <iostream>
 #include <vector>
 
-int rotated_search(std::vector<int> &nums, int target) {
-    int start{};
+int rotated_search(std::vector<int>& nums, int target) {
+    int start {};
     int end = nums.size() - 1;
     while (start <= end) {
         int middle = (start + end) / 2;
@@ -36,6 +36,6 @@ int rotated_search(std::vector<int> &nums, int target) {
 
 int main() {
     std::cout << std::boolalpha;
-    std::vector<int> a{7, 9, 10, 1, 2, 3, 4, 5, 6};
+    std::vector<int> a { 7, 9, 10, 1, 2, 3, 4, 5, 6 };
     std::cout << (rotated_search(a, 4) == 6) << '\n';
 }

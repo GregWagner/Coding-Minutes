@@ -25,40 +25,48 @@
  *    If the element is smaller than the max element in the heap
  *    replace the max element with it
  */
+#include <algorithm>
 #include <iostream>
 #include <queue>
-#include <algorithm>
 
 class Car {
-    public:
-        Car(const std::string &id, int x, int y) : id {id}, x{x}, y{y} {}
-        int distance() const {
-            return x * x + y * y;
-        }
-        std::string getId() const {
-            return id;
-        }
+public:
+    Car(const std::string& id, int x, int y)
+        : id { id }
+        , x { x }
+        , y { y } {
+    }
 
-    private:
-        std::string id;
-        int x {};
-        int y {};
+    int distance() const {
+        return x * x + y * y;
+    }
+
+    std::string getId() const {
+        return id;
+    }
+
+private:
+    std::string id;
+    int x {};
+    int y {};
 };
 
 struct CarCompare {
-    bool operator()(const Car &a, const Car &b) {
+    bool operator()(const Car& a, const Car& b) {
         return a.distance() < b.distance();
     }
 };
 
-void printNearestCars(const std::vector<Car> &cars, size_t k) {
-    std::priority_queue<Car, std::vector<Car>, CarCompare> maxHeap(cars.begin(), cars.begin() + k);
+void printNearestCars(const std::vector<Car>& cars, size_t k) {
+    // create a max heap of size k
+    std::priority_queue<Car, std::vector<Car>, CarCompare> maxHeap(
+        cars.begin(), cars.begin() + k);
 
-    for (size_t i {k}; i < cars.size(); ++i) {
+    for (size_t i { k }; i < cars.size(); ++i) {
         auto car = cars[i];
         if (car.distance() < maxHeap.top().distance()) {
             maxHeap.pop();
-            maxHeap.push(car);
+            maxHeap.push(car); // this will heapify
         }
     }
 

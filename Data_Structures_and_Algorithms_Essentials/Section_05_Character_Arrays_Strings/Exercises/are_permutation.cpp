@@ -25,6 +25,6 @@ bool arePermutation(const std::string& A, const std::string& B) {
 
 int main() {
     std::cout << std::boolalpha;
-    std::cout << (arePermutation("test", "ttew") == false) <<'\n';
-    std::cout << (arePermutation("abcd", "dcba") == true) <<'\n';
+    std::cout << (arePermutation("test", "ttew") == false) << '\n';
+    std::cout << (arePermutation("abcd", "dcba") == true) << '\n';
 }

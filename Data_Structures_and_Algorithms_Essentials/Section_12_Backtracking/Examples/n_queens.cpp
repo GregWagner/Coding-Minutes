@@ -12,8 +12,8 @@
 #include <iostream>
 
 void printBoard(int n, int board[][20]) {
-    for (int i{}; i < n; ++i) {
-        for (int j{}; j < n; ++j) {
+    for (int i {}; i < n; ++i) {
+        for (int j {}; j < n; ++j) {
             std::cout << board[i][j] << ' ';
         }
         std::cout << '\n';
@@ -23,15 +23,15 @@ void printBoard(int n, int board[][20]) {
 
 bool validSpot(int n, int board[][20], int x, int y) {
     // check columns
-    for (int k{}; k < x; ++k) {
+    for (int k {}; k < x; ++k) {
         if (board[k][y]) {
             return false;
         }
     }
 
     // check left diagonal
-    int i{x};
-    int j{y};
+    int i { x };
+    int j { y };
     while (i >= 0 && j >= 0) {
         if (board[i][j]) {
             return false;
@@ -60,8 +60,8 @@ int countSolveNQueen(int n, int board[][20], int row = 0) {
     }
 
     // recursive case - try to place a queen in every row
-    int count{};
-    for (int col{}; col < n; ++col) {
+    int count {};
+    for (int col {}; col < n; ++col) {
         if (validSpot(n, board, row, col)) {
             board[row][col] = 1;
             count += countSolveNQueen(n, board, row + 1);
@@ -81,7 +81,7 @@ bool solveNQueen(int n, int board[][20], int row = 0) {
     }
 
     // recursive case - try to place a queen in every row
-    for (int col{}; col < n; ++col) {
+    for (int col {}; col < n; ++col) {
         if (validSpot(n, board, row, col)) {
             board[row][col] = 1;
             if (solveNQueen(n, board, row + 1)) {
@@ -96,8 +96,8 @@ bool solveNQueen(int n, int board[][20], int row = 0) {
 }
 
 int main() {
-    int board[20][20]{};
+    int board[20][20] {};
     solveNQueen(10, board);
-    int board1[20][20]{};
+    int board1[20][20] {};
     std::cout << "Count: " << countSolveNQueen(8, board1) << '\n';
 }

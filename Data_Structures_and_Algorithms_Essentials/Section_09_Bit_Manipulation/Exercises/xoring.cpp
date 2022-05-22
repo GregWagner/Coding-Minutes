@@ -11,14 +11,14 @@
 #include <vector>
 
 int xoring(std::vector<int> v) {
-  int answer{};
-  for (const auto &ele : v) {
-    answer ^= ele;
-  }
-  return answer;
+    int answer {};
+    for (const auto& ele : v) {
+        answer ^= ele;
+    }
+    return answer;
 }
 
 int main() {
-  std::vector<int> v{1, 2, 3, 1, 4, 2, 3};
-  std::cout << xoring(v) << '\n';
+    std::vector<int> v { 1, 2, 3, 1, 4, 2, 3 };
+    std::cout << xoring(v) << '\n';
 }

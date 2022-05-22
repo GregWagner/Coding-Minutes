@@ -1,17 +1,17 @@
 #include <iostream>
 
 class node {
-  public:
+public:
     int data;
-    node *next;
+    node* next;
     node(int data) {
         this->data = data;
         this->next = NULL;
     }
 };
 
-void printList(node *head) {
-    node *temp = head;
+void printList(node* head) {
+    node* temp = head;
     while (temp) {
         std::cout << temp->data << " -> ";
         temp = temp->next;
@@ -19,9 +19,9 @@ void printList(node *head) {
     std::cout << "Null\n";
 }
 
-node *bubble_sort_LinkedList_itr(node *head) {
+node* bubble_sort_LinkedList_itr(node* head) {
     bool swapMade = true;
-    node *currentNode = head;
+    node* currentNode = head;
     while (swapMade) {
         swapMade = false;
         currentNode = head;
@@ -40,11 +40,11 @@ node *bubble_sort_LinkedList_itr(node *head) {
 }
 
 int main() {
-    int a[]{30, 20, 5};
-    node *head = new node(10);
-    node *currentNode = head;
-    for (int i{}; i < 3; ++i) {
-        node *temp = new node(a[i]);
+    int a[] { 30, 20, 5 };
+    node* head = new node(10);
+    node* currentNode = head;
+    for (int i {}; i < 3; ++i) {
+        node* temp = new node(a[i]);
         currentNode->next = temp;
         currentNode = temp;
     }

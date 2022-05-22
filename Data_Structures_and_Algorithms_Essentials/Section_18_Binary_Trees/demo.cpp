@@ -2,17 +2,19 @@
 #include <queue>
 
 class Node {
-  public:
-    Node(int data) : data{data} {}
+public:
+    Node(int data)
+        : data { data } {
+    }
 
     int data;
-    Node *left{};
-    Node *right{};
+    Node* left {};
+    Node* right {};
 };
 
 // Preorder builld of the tree (root, then left, then righ)
-Node *builldtree() {
-    int data{};
+Node* builldtree() {
+    int data {};
     std::cout << "Enter data: ";
     std::cin >> data;
 
@@ -20,26 +22,26 @@ Node *builldtree() {
         return nullptr;
     }
 
-    Node *node = new Node(data);
+    Node* node = new Node(data);
     node->left = builldtree();
     node->right = builldtree();
     return node;
 }
 
-Node *buildLevelOrder() {
-    int data{};
+Node* buildLevelOrder() {
+    int data {};
     std::cout << "Enter data: ";
     std::cin >> data;
 
     if (data == -1) {
         return nullptr;
     }
-    std::queue<Node *> q;
-    Node *root = new Node(data);
+    std::queue<Node*> q;
+    Node* root = new Node(data);
     q.push(root);
 
     while (!q.empty()) {
-        Node *node = q.front();
+        Node* node = q.front();
         q.pop();
 
         // read in left
@@ -59,7 +61,7 @@ Node *buildLevelOrder() {
     return root;
 }
 
-void deleteTree(Node *root) {
+void deleteTree(Node* root) {
     if (root) {
         deleteTree(root->left);
         deleteTree(root->right);
@@ -67,14 +69,14 @@ void deleteTree(Node *root) {
     }
 }
 
-int height(Node *root) {
+int height(Node* root) {
     if (root == nullptr) {
         return 0;
     }
     return 1 + std::max(height(root->left), height(root->right));
 }
 
-void printPreorder(Node *root) {
+void printPreorder(Node* root) {
     if (root == nullptr) {
         return;
     }
@@ -83,7 +85,7 @@ void printPreorder(Node *root) {
     printPreorder(root->right);
 }
 
-void printInorder(Node *root) {
+void printInorder(Node* root) {
     if (root == nullptr) {
         return;
     }
@@ -92,7 +94,7 @@ void printInorder(Node *root) {
     printInorder(root->right);
 }
 
-void printPostorder(Node *root) {
+void printPostorder(Node* root) {
     if (root == nullptr) {
         return;
     }
@@ -102,14 +104,14 @@ void printPostorder(Node *root) {
 }
 
 // Level Order (BFS)
-void printLevelOrder(Node *root) {
-    std::queue<Node *> q;
+void printLevelOrder(Node* root) {
+    std::queue<Node*> q;
 
     q.push(root);
     q.push(nullptr); // needed to mark end of level
 
     while (!q.empty()) {
-        Node *temp = q.front();
+        Node* temp = q.front();
         if (temp == nullptr) {
             q.pop();
             std::cout << '\n';
@@ -135,28 +137,28 @@ void printLevelOrder(Node *root) {
  * between any two nodes on the tree.
  * O(n^2)
  */
-int diameter(Node *root) {
+int diameter(Node* root) {
     if (root == nullptr) {
         return 0;
     }
 
-    int includesRoot{height(root->left) + height(root->right)};
-    int rightHeight{diameter(root->right)};
-    int leftHeight{diameter(root->left)};
+    int includesRoot { height(root->left) + height(root->right) };
+    int rightHeight { diameter(root->right) };
+    int leftHeight { diameter(root->left) };
 
     return std::max(includesRoot, std::max(rightHeight, leftHeight));
 }
 
 // O(n) way to get diameter!
 // At every node, return height and diameter
-std::pair<int, int> diameter1(Node *root) {
-    std::pair<int, int> answer{0, 0};
+std::pair<int, int> diameter1(Node* root) {
+    std::pair<int, int> answer { 0, 0 };
     if (root == nullptr) {
         return answer;
     }
 
-    std::pair<int, int> right{diameter1(root->right)};
-    std::pair<int, int> left{diameter1(root->left)};
+    std::pair<int, int> right { diameter1(root->right) };
+    std::pair<int, int> left { diameter1(root->left) };
 
     answer.first = std::max(left.first, right.first) + 1;
 
@@ -182,7 +184,7 @@ int main() {
 
     deleteTree(root);
 #endif
-    Node *root = buildLevelOrder();
+    Node* root = buildLevelOrder();
     printLevelOrder(root);
     std::cout << "Height is " << height(root) << '\n';
     std::cout << "Diameter is " << diameter(root) << '\n';

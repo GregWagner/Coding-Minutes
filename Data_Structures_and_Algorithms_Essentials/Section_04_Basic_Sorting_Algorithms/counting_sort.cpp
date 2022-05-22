@@ -15,7 +15,7 @@ std::vector<T> countingSort(const std::vector<T>& a) {
     }
 
     // use the largest element to create a new array
-    std::vector<T> frequency (largestNumber + 1);
+    std::vector<T> frequency(largestNumber + 1);
     for (const auto& ele : a) {
         ++frequency[ele];
     }
@@ -28,13 +28,13 @@ std::vector<T> countingSort(const std::vector<T>& a) {
             while (frequency[i]--) {
                 answer[index++] = i;
             }
-        } 
+        }
     }
     return answer;
 }
 
 template <typename T>
-void print(const std::vector<T> &a) {
+void print(const std::vector<T>& a) {
     for (const auto& ele : a) {
         std::cout << ele << ' ';
     }
@@ -42,7 +42,7 @@ void print(const std::vector<T> &a) {
 }
 
 int main() {
-    std::vector<int> a {6, 2, 7, 4, 8, 1, 3};
+    std::vector<int> a { 6, 2, 7, 4, 8, 1, 3 };
     a = countingSort(a);
     print(a);
 }

@@ -31,11 +31,11 @@
 163     Implement Stack with 2 Queues
 170     Level Order Print
 175-177 Diameter of a binary tree
+182     Delete node BST
+184     Print in range
+192     Remove min/max Code - do homework
+195/196 Nearby Cars
 
-180     Delete node BST
-181     Print in range
-190     Remove min/max Code - do homework
-192/193 Nearby Cars
 202     Hashing Code - implement erase() and isPresent()
 204     Webinar - watch this
 220     Topograpical Ordering using BFS (may not be working)

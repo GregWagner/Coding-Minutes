@@ -8,7 +8,7 @@
 #include <iostream>
 #include <vector>
 
-void helper(std::vector<std::string> &a, int n) {
+void helper(std::vector<std::string>& a, int n) {
     if (n == 0) {
         return;
     }
@@ -22,7 +22,7 @@ std::vector<std::string> binaryStrings(int n) {
 
 int main() {
     auto answer = binaryStrings(3);
-    for (const auto &value : answer) {
+    for (const auto& value : answer) {
         std::cout << value << '\n';
     }
 }

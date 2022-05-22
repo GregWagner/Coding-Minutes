@@ -1,7 +1,9 @@
 #include <iostream>
 #include <stack>
 
-bool duplicateParentheses(std::string str) { return false; }
+bool duplicateParentheses(std::string str) {
+    return false;
+}
 
 int main() {
     std::cout << std::boolalpha;

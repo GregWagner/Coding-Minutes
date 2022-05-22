@@ -8,18 +8,18 @@
 #include <iostream>
 
 int power(int x, int y, int mod) {
-  int answer{1};
-  while (y) {
-    if (y & 1) {
-      answer = (answer * x) % mod;
+    int answer { 1 };
+    while (y) {
+        if (y & 1) {
+            answer = (answer * x) % mod;
+        }
+        x = (x * x) % mod;
+        y >>= 1;
     }
-    x = (x * x) % mod;
-    y >>= 1;
-  }
-  return answer;
+    return answer;
 }
 
 int main() {
-  std::cout << std::boolalpha;
-  std::cout << (power(12, 25, 10007) == 9603) << '\n';
+    std::cout << std::boolalpha;
+    std::cout << (power(12, 25, 10007) == 9603) << '\n';
 }

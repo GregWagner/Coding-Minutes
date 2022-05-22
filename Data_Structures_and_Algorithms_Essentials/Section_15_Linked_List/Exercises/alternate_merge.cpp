@@ -6,9 +6,9 @@
 #include <iostream>
 
 class node {
-  public:
+public:
     int data;
-    node *next;
+    node* next;
 
     node(int data) {
         this->data = data;
@@ -16,8 +16,8 @@ class node {
     }
 };
 
-void printList(node *head) {
-    node *temp = head;
+void printList(node* head) {
+    node* temp = head;
     while (temp) {
         std::cout << temp->data << " -> ";
         temp = temp->next;
@@ -25,13 +25,13 @@ void printList(node *head) {
     std::cout << "Null\n";
 }
 
-node *alternateMerge(node *root1, node *root2) {
-    node *answer{};
+node* alternateMerge(node* root1, node* root2) {
+    node* answer {};
     if (root1) {
         answer = new node(root1->data);
         root1 = root1->next;
     }
-    node *currentNode{answer};
+    node* currentNode { answer };
     if (root2) {
         if (answer == nullptr) {
             answer = new node(root2->data);
@@ -60,21 +60,21 @@ node *alternateMerge(node *root1, node *root2) {
 }
 
 int main() {
-    int a[]{5, 7, 17, 13, 11};
-    node *firstHead = new node(5);
-    node *currentNode = firstHead;
-    for (int i{1}; i < 5; ++i) {
-        node *temp = new node(a[i]);
+    int a[] { 5, 7, 17, 13, 11 };
+    node* firstHead = new node(5);
+    node* currentNode = firstHead;
+    for (int i { 1 }; i < 5; ++i) {
+        node* temp = new node(a[i]);
         currentNode->next = temp;
         currentNode = temp;
     }
     printList(firstHead);
 
-    int b[]{12, 10, 2, 4, 6};
-    node *secondHead = new node(12);
+    int b[] { 12, 10, 2, 4, 6 };
+    node* secondHead = new node(12);
     currentNode = secondHead;
-    for (int i{1}; i < 5; ++i) {
-        node *temp = new node(b[i]);
+    for (int i { 1 }; i < 5; ++i) {
+        node* temp = new node(b[i]);
         currentNode->next = temp;
         currentNode = temp;
     }

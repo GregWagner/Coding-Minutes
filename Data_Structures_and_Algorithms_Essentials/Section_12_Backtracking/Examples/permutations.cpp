@@ -8,14 +8,14 @@
  */
 #include <iostream>
 
-void findPermutations(std::string &s, size_t i = 0) {
+void findPermutations(std::string& s, size_t i = 0) {
     // base case
     if (i == s.length() - 1) {
         std::cout << s << '\n';
         return;
     }
 
-    for (size_t j{i}; j < s.length(); ++j) {
+    for (size_t j { i }; j < s.length(); ++j) {
         std::swap(s[i], s[j]);
         // recursive call
         findPermutations(s, i + 1);
@@ -26,6 +26,6 @@ void findPermutations(std::string &s, size_t i = 0) {
 }
 
 int main() {
-    std::string s{"abc"};
+    std::string s { "abc" };
     findPermutations(s);
 }

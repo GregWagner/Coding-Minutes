@@ -2,7 +2,7 @@
 #include <queue>
 
 class Stack {
-  public:
+public:
     void push(int x) {
         // insert item in the non empty queue
         q1.empty() ? q2.push(x) : q1.push(x);
@@ -59,9 +59,11 @@ class Stack {
         return -1;
     }
 
-    bool empty() { return q1.empty() && q2.empty(); }
+    bool empty() {
+        return q1.empty() && q2.empty();
+    }
 
-  private:
+private:
     std::queue<int> q1;
     std::queue<int> q2;
 };

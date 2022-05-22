@@ -10,12 +10,12 @@
 #include <stack>
 #include <vector>
 
-std::vector<int> stockSpanner(std::vector<int> &stocks) {
+std::vector<int> stockSpanner(std::vector<int>& stocks) {
     std::vector<int> answer(stocks.size(), 1);
     std::stack<int> s; // store indices o the days
     s.push(0);
 
-    for (size_t i{1}; i < stocks.size(); ++i) {
+    for (size_t i { 1 }; i < stocks.size(); ++i) {
         //  find the previous highest
         while (!s.empty() && stocks[s.top()] <= stocks[i]) {
             s.pop();
@@ -28,9 +28,9 @@ std::vector<int> stockSpanner(std::vector<int> &stocks) {
 }
 
 int main() {
-    std::vector<int> a{100, 80, 60, 70, 60, 75, 85};
+    std::vector<int> a { 100, 80, 60, 70, 60, 75, 85 };
     auto answer = stockSpanner(a);
-    for (const auto &e : answer) {
+    for (const auto& e : answer) {
         std::cout << e << ' ';
     }
     std::cout << '\n';

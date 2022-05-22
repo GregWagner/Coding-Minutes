@@ -7,10 +7,10 @@
 
 std::vector<int> increasingNumbers(int N) {
     std::vector<int> results;
-    for (int i {1}; i <= N; ++i) {
+    for (int i { 1 }; i <= N; ++i) {
         results.push_back(i);
     }
-    return results; 
+    return results;
 }
 
 int main() {

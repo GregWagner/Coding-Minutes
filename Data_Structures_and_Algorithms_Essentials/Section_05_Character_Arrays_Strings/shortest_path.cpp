@@ -1,4 +1,4 @@
-/* 
+/*
  * Given a long route containing NSEW directions, find the shortest
  * path to reach the location.
  * Example
@@ -22,14 +22,14 @@ std::pair<int, int> calculatePosition(const std::string& route) {
             --xPosition;
         }
     }
-    return {xPosition, yPosition};
+    return { xPosition, yPosition };
 }
 
 void printFinalPosition(std::pair<int, int> position) {
     std::ostringstream output;
 
-    int xPosition {position.first};
-    int yPosition {position.second};
+    int xPosition { position.first };
+    int yPosition { position.second };
 
     bool goingNorth = yPosition > 0;
     while (yPosition--) {

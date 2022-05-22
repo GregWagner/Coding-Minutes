@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stack>
 
-void insertAtBottom(std::stack<int> &s, int data) {
+void insertAtBottom(std::stack<int>& s, int data) {
     if (s.empty()) {
         s.push(data);
         return;
@@ -12,7 +12,7 @@ void insertAtBottom(std::stack<int> &s, int data) {
     s.push(temp);
 }
 
-void reverseStack(std::stack<int> &s) {
+void reverseStack(std::stack<int>& s) {
     if (s.empty()) {
         return;
     }

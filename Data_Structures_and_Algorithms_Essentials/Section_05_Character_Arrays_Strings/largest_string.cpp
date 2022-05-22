@@ -11,6 +11,6 @@ int main() {
             largestString = s;
         }
     }
-    std::cout << "Largest String was " << largestString 
-        << ", which is " << largestSize << " characters long\n";
+    std::cout << "Largest String was " << largestString
+              << ", which is " << largestSize << " characters long\n";
 }

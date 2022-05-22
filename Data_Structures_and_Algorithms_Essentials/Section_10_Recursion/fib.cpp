@@ -7,4 +7,6 @@ long long fib(long long n) {
     return fib(n - 1) + fib(n - 2);
 }
 
-int main() { std::cout << fib(6) << '\n'; }
+int main() {
+    std::cout << fib(6) << '\n';
+}

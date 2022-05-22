@@ -8,9 +8,9 @@
 #include <iostream>
 
 class node {
-  public:
+public:
     int data;
-    node *next;
+    node* next;
 
     node(int data) {
         this->data = data;
@@ -18,11 +18,11 @@ class node {
     }
 };
 
-int kthLastElement(node *head, int k) {
-    node *firstPtr{head};
-    node *secondPtr{head};
+int kthLastElement(node* head, int k) {
+    node* firstPtr { head };
+    node* secondPtr { head };
 
-    for (int i{}; i < k; ++i) {
+    for (int i {}; i < k; ++i) {
         secondPtr = secondPtr->next;
     }
 
@@ -34,14 +34,14 @@ int kthLastElement(node *head, int k) {
 }
 
 int main() {
-    node *head = new node(7);
-    for (int i{6}; i > 0; --i) {
-        node *temp = new node(i);
+    node* head = new node(7);
+    for (int i { 6 }; i > 0; --i) {
+        node* temp = new node(i);
         temp->next = head;
         head = temp;
     }
 
-    node *temp = head;
+    node* temp = head;
     while (temp) {
         std::cout << temp->data << " -> ";
         temp = temp->next;

@@ -39,76 +39,76 @@
 #include <vector>
 
 int main() {
-  int n;
-  std::cin >> n;
+    int n;
+    std::cin >> n;
 
-  std::vector<std::vector<char>> v(n, std::vector<char>(n, 0));
+    std::vector<std::vector<char>> v(n, std::vector<char>(n, 0));
 
-  for (int i{}; i < n; i++) {
-    for (int j{}; j < n; j++) {
-      std::cin >> v[i][j];
+    for (int i {}; i < n; i++) {
+        for (int j {}; j < n; j++) {
+            std::cin >> v[i][j];
+        }
     }
-  }
 
-  for (int i{}; i < n; i++) {
-    for (int j{}; j < n; j++) {
-      std::cout << v[i][j] << " ";
-    }
-    std::cout << '\n';
-  }
-  std::cout << '\n';
-
-  std::vector<std::vector<int>> M(n, std::vector<int>(n, 0));
-
-  for (int i{}; i < n; i++) {
-    M[i][0] = (v[i][0] == '#' ? 1 : 0);
-
-    if (i != 0) {
-      M[i][0] += M[i - 1][0];
-    }
-  }
-
-  for (int i{}; i < n; i++) {
-    M[0][i] = (v[0][i] == '#' ? 1 : 0);
-
-    if (i != 0) {
-      M[0][i] += M[0][i - 1];
-    }
-  }
-  for (int i = 1; i < n; i++) {
-    for (int j = 1; j < n; j++) {
-      if (v[i][j] == '#') {
-        M[i][j] = 1 + M[i - 1][j] + M[i][j - 1] - M[i - 1][j - 1];
-      } else {
-        M[i][j] = 0 + M[i - 1][j] + M[i][j - 1] - M[i - 1][j - 1];
-      }
-    }
-  }
-
-  for (int i{}; i < n; i++) {
-    for (int j{}; j < n; j++) {
-      std::cout << M[i][j] << " ";
+    for (int i {}; i < n; i++) {
+        for (int j {}; j < n; j++) {
+            std::cout << v[i][j] << " ";
+        }
+        std::cout << '\n';
     }
     std::cout << '\n';
-  }
-  std::cout << '\n';
 
-  int answer{};
+    std::vector<std::vector<int>> M(n, std::vector<int>(n, 0));
 
-  for (int i{}; i < n - 1; i++) {
-    int s1{1}, s2{}, s3{}, s4{};
-    int minimum{};
+    for (int i {}; i < n; i++) {
+        M[i][0] = (v[i][0] == '#' ? 1 : 0);
 
-    for (int j{}; j < n - 1; j++) {
-      s1 = M[i][j];
-      s2 = M[i][n - 1] - M[i][j];
-      s3 = M[n - 1][j] - M[i][j];
-      s4 = M[n - 1][n - 1] - (s1 + s2 + s3);
-
-      minimum = std::min({s1, s2, s3, s4});
-      answer = std::max(answer, minimum);
+        if (i != 0) {
+            M[i][0] += M[i - 1][0];
+        }
     }
-  }
 
-  std::cout << "max of min is: " << answer << '\n';
+    for (int i {}; i < n; i++) {
+        M[0][i] = (v[0][i] == '#' ? 1 : 0);
+
+        if (i != 0) {
+            M[0][i] += M[0][i - 1];
+        }
+    }
+    for (int i = 1; i < n; i++) {
+        for (int j = 1; j < n; j++) {
+            if (v[i][j] == '#') {
+                M[i][j] = 1 + M[i - 1][j] + M[i][j - 1] - M[i - 1][j - 1];
+            } else {
+                M[i][j] = 0 + M[i - 1][j] + M[i][j - 1] - M[i - 1][j - 1];
+            }
+        }
+    }
+
+    for (int i {}; i < n; i++) {
+        for (int j {}; j < n; j++) {
+            std::cout << M[i][j] << " ";
+        }
+        std::cout << '\n';
+    }
+    std::cout << '\n';
+
+    int answer {};
+
+    for (int i {}; i < n - 1; i++) {
+        int s1 { 1 }, s2 {}, s3 {}, s4 {};
+        int minimum {};
+
+        for (int j {}; j < n - 1; j++) {
+            s1 = M[i][j];
+            s2 = M[i][n - 1] - M[i][j];
+            s3 = M[n - 1][j] - M[i][j];
+            s4 = M[n - 1][n - 1] - (s1 + s2 + s3);
+
+            minimum = std::min({ s1, s2, s3, s4 });
+            answer = std::max(answer, minimum);
+        }
+    }
+
+    std::cout << "max of min is: " << answer << '\n';
 }

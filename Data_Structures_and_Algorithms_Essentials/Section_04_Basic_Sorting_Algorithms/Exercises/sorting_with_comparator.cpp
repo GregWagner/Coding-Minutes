@@ -2,9 +2,9 @@
  * Given a vector and bool flag, sort the vector in acccodance to the
  * boolean value. true -> sort in non-descreasing order.
  */
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 std::vector<int> sortingWithComparator(std::vector<int> a, bool flag) {
 
@@ -17,7 +17,7 @@ std::vector<int> sortingWithComparator(std::vector<int> a, bool flag) {
 }
 
 template <typename T>
-void print(const std::vector<T> &a) {
+void print(const std::vector<T>& a) {
     for (const auto& ele : a) {
         std::cout << ele << ' ';
     }
@@ -25,7 +25,7 @@ void print(const std::vector<T> &a) {
 }
 
 int main() {
-    std::vector<int> a {6, 2, 7, 4, 8, 1, 3};
+    std::vector<int> a { 6, 2, 7, 4, 8, 1, 3 };
     auto b = sortingWithComparator(a, true);
     print(b);
 

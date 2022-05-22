@@ -11,16 +11,16 @@
 #include <iostream>
 
 int earthLevel(int k) {
-  int count {};
-  while (k) {
-    // removes the last set bit from n
-    k &= k - 1;
-    ++count;
-  }
-  return count;
+    int count {};
+    while (k) {
+        // removes the last set bit from n
+        k &= k - 1;
+        ++count;
+    }
+    return count;
 }
 
 int main() {
-  std::cout << std::boolalpha;
-  std::cout << (earthLevel(7) == 3) << '\n';
+    std::cout << std::boolalpha;
+    std::cout << (earthLevel(7) == 3) << '\n';
 }

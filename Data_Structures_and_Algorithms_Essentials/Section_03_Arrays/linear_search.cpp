@@ -2,8 +2,8 @@
 #include <vector>
 
 template <typename T>
-int linear_search(const std::vector<T> &a, T key) {
-    int answer {-1};  
+int linear_search(const std::vector<T>& a, T key) {
+    int answer { -1 };
     for (size_t index {}; index < a.size(); ++index) {
         if (a[index] == key) {
             return index;
@@ -13,7 +13,7 @@ int linear_search(const std::vector<T> &a, T key) {
 }
 
 int main() {
-    std::vector<int> a {10, 15, 12, 9, 6, 4, 3, 10, 8};
+    std::vector<int> a { 10, 15, 12, 9, 6, 4, 3, 10, 8 };
 
     int key {};
     std::cin >> key;

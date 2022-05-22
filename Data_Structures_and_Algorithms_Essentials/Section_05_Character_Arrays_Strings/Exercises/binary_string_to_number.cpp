@@ -1,9 +1,9 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 
 int binaryToDecimal(std::string s) {
     int result {};
-    int multiplier {1};
+    int multiplier { 1 };
     for (int i = s.size() - 1; i >= 0; --i) {
         if (s[i] == '1') {
             result += multiplier;

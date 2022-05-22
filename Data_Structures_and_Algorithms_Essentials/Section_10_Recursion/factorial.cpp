@@ -8,5 +8,5 @@ long long fact(long long n) {
 }
 
 int main() {
-    std::cout <<  fact(5) << '\n';
+    std::cout << fact(5) << '\n';
 }

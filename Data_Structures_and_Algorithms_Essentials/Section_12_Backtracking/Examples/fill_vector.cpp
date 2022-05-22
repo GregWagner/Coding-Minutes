@@ -1,15 +1,15 @@
 #include <iostream>
 #include <vector>
 
-void printVector(const std::vector<int> &a, int n) {
-    for (int i{}; i < n; ++i) {
+void printVector(const std::vector<int>& a, int n) {
+    for (int i {}; i < n; ++i) {
         std::cout << a[i] << ' ';
     }
     std::cout << '\n';
 }
 
 // note a is shared accross all function calls
-void fillVector(std::vector<int> &a, int index, int n, int value) {
+void fillVector(std::vector<int>& a, int index, int n, int value) {
     // base case
     if (index == n) {
         printVector(a, 5);

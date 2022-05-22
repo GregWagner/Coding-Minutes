@@ -1,7 +1,7 @@
+#include <algorithm>
 #include <iostream>
 #include <unordered_set>
 #include <vector>
-#include <algorithm>
 
 std::string removeDuplicate(std::string s) {
     std::unordered_set<char> hash;

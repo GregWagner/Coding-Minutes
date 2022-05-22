@@ -2,13 +2,16 @@
 #include <vector>
 
 class Node {
-    public:
-        int value;
-        Node* left;
-        Node* right;
+public:
+    int value;
+    Node* left;
+    Node* right;
 
-        Node(int value) : value {value}, left {}, right {} {
-        }
+    Node(int value)
+        : value { value }
+        , left {}
+        , right {} {
+    }
 };
 
 Node* insert(Node* root, int value) {
@@ -21,13 +24,13 @@ Node* insert(Node* root, int value) {
     } else {
         root->right = insert(root->right, value);
     }
-    return root; 
+    return root;
 }
 
 // InOrder traversal will print tree in order
 void printInOrder(Node* root) {
     if (root == nullptr) {
-        return;        
+        return;
     }
     printInOrder(root->left);
     std::cout << root->value << ' ';
@@ -69,7 +72,7 @@ Node* deleteNode(Node* root, int key) {
             delete root;
             root = nullptr;
 
-        // Case 2: Single Child
+            // Case 2: Single Child
         } else if (root->left == nullptr) {
             Node* temp = root;
             root = root->right;
@@ -79,7 +82,7 @@ Node* deleteNode(Node* root, int key) {
             root = root->left;
             delete temp;
 
-        // Case 3: Two Children
+            // Case 3: Two Children
         } else {
             // find smallest node in the right subtree
             Node* temp = findSmallestNode(root->right);
@@ -101,7 +104,7 @@ void printRange(Node* root, int start, int end) {
         printRange(root->right, start, end);
     } else if (root->value > end) {
         printRange(root->left, start, end);
-    } else if (root->value < start){
+    } else if (root->value < start) {
         printRange(root->right, start, end);
     }
 }
@@ -135,7 +138,7 @@ void printRootToLeaf(Node* root, std::vector<int>& path) {
 
 int main() {
     Node* root = nullptr;
-    int a[] {8, 3, 10, 1, 6, 14, 4, 7, 13};
+    int a[] { 8, 3, 10, 1, 6, 14, 4, 7, 13 };
     for (int x : a) {
         root = insert(root, x);
     }

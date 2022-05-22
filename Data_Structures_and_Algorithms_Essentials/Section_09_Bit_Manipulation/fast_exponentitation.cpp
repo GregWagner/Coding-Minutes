@@ -8,12 +8,12 @@
 
 // O(log(n))
 int fastExpo(int a, int n) {
-    int answer {1};
+    int answer { 1 };
     while (n) {
         if (n & 1) {
             answer *= a;
         }
-        a *= a;    // square the number
+        a *= a; // square the number
         n >>= 1;
     }
     return answer;
@@ -23,4 +23,3 @@ int main() {
     std::cout << std::boolalpha;
     std::cout << (fastExpo(3, 5) == 243) << '\n';
 }
-

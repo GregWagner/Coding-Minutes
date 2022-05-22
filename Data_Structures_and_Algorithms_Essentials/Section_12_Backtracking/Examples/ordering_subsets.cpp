@@ -5,8 +5,8 @@
 #include <iostream>
 #include <vector>
 
-void findSubsets(char *input, char *output, std::vector<std::string> &list,
-                 int i = 0, int j = 0) {
+void findSubsets(char* input, char* output, std::vector<std::string>& list,
+    int i = 0, int j = 0) {
     // base case
     if (input[i] == '\0') {
         output[j] = '\0';
@@ -30,10 +30,10 @@ int main() {
 
     findSubsets(input, output, list);
 
-    std::sort(begin(list), end(list), [](std::string &a, std::string &b) {
+    std::sort(begin(list), end(list), [](std::string& a, std::string& b) {
         return (a.length() == b.length() ? a < b : a.length() < b.length());
     });
-    for (const auto &ele : list) {
+    for (const auto& ele : list) {
         std::cout << ele << ' ';
     }
     std::cout << '\n';

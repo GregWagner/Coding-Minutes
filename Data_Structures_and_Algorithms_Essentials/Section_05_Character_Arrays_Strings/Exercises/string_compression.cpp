@@ -12,8 +12,8 @@
 int compress(std::vector<char>& chars) {
     std::vector<char> output;
     for (size_t i {}; i < chars.size(); ++i) {
-        auto ch {chars[i]};
-        int count {1};
+        auto ch { chars[i] };
+        int count { 1 };
         while (chars[i + 1] == ch) {
             ++count;
             ++i;
@@ -37,7 +37,7 @@ void print(std::vector<char>& chars) {
 }
 
 int main() {
-    std::vector<char> a {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+    std::vector<char> a { 'a', 'a', 'b', 'b', 'c', 'c', 'c' };
     std::cout << compress(a) << '\n';
     print(a);
 }

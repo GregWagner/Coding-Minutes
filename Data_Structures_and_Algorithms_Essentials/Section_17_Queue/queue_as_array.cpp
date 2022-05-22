@@ -1,16 +1,24 @@
 #include <iostream>
 
 class Queue {
-  public:
-    Queue(int defaultSize = 5) : maxSize(defaultSize), rear{defaultSize - 1} {
+public:
+    Queue(int defaultSize = 5)
+        : maxSize(defaultSize)
+        , rear { defaultSize - 1 } {
         arr = new int[maxSize];
     }
 
-    ~Queue() { delete[] arr; }
+    ~Queue() {
+        delete[] arr;
+    }
 
-    bool full() const { return currentSize == maxSize; }
+    bool full() const {
+        return currentSize == maxSize;
+    }
 
-    bool empty() const { return currentSize == 0; }
+    bool empty() const {
+        return currentSize == 0;
+    }
 
     void push(int data) {
         if (full()) {
@@ -41,13 +49,13 @@ class Queue {
         return arr[front];
     }
 
-  private:
-    int *arr;
-    int currentSize{};
-    int maxSize{};
+private:
+    int* arr;
+    int currentSize {};
+    int maxSize {};
 
-    int front{};
-    int rear{};
+    int front {};
+    int rear {};
 };
 
 int main() {

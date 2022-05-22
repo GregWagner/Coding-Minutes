@@ -2,15 +2,15 @@
  * Given a sentence, count the numer of alphabets, digits,
  * and spaces in the sentence.
  */
-#include <iostream>
 #include <cstring>
+#include <iostream>
 
 int main() {
     int alpha {};
     int spaces {};
     int digits {};
 
-    auto ch  {std::cin.get()};
+    auto ch { std::cin.get() };
     while (ch != '\n') {
         if (ch >= '0' && ch <= '9') {
             ++digits;
@@ -22,5 +22,5 @@ int main() {
         ch = std::cin.get();
     }
     std::cout << "Alpha: " << alpha << "\nSpaces: " << spaces
-        << "\nDigits: " << digits << '\n';
+              << "\nDigits: " << digits << '\n';
 }

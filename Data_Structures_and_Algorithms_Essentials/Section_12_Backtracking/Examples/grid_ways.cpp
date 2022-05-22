@@ -27,4 +27,6 @@ int gridWays(int i, int j, int m, int n) {
     return gridWays(i + 1, j, n, m) + gridWays(i, j + 1, n, m);
 }
 
-int main() { std::cout << gridWays(0, 0, 3, 3) << '\n'; }
+int main() {
+    std::cout << gridWays(0, 0, 3, 3) << '\n';
+}

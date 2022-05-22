@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 
-int helper(const std::vector<int> &v, int key, int start, int end) {
+int helper(const std::vector<int>& v, int key, int start, int end) {
     if (start >= end) {
         return -1;
     }
@@ -20,17 +20,14 @@ int helper(const std::vector<int> &v, int key, int start, int end) {
     }
 }
 
-int binarySearch(std::vector<int> v, int x)
-{
+int binarySearch(std::vector<int> v, int x) {
     return helper(v, x, 0, v.size());
 }
 
 int main() {
     std::cout << std::boolalpha;
-    std::vector<int> a {1, 3, 5, 7, 9};
+    std::vector<int> a { 1, 3, 5, 7, 9 };
     std::cout << (binarySearch(a, 3) == 1) << '\n';
     std::cout << (binarySearch(a, 9) == 4) << '\n';
     std::cout << (binarySearch(a, 100) == -1) << '\n';
 }
-
-
