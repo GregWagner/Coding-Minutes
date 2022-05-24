@@ -23,8 +23,8 @@
 // bottom up solution
 int lis(const std::vector<int>& a) {
     std::vector<int> dp(a.size(), 1);
-    int length {1};
-    for (size_t i {1}; i < a.size(); ++i) {
+    int length { 1 };
+    for (size_t i { 1 }; i < a.size(); ++i) {
         for (size_t j {}; j < i; ++j) {
             // if we can attach this valus to a previous sequence
             if (a[i] > a[j]) {
@@ -37,6 +37,6 @@ int lis(const std::vector<int>& a) {
 }
 
 int main() {
-    std::vector<int> a {50, 4, 10, 8, 30, 100};
+    std::vector<int> a { 50, 4, 10, 8, 30, 100 };
     std::cout << lis(a) << '\n';
 }

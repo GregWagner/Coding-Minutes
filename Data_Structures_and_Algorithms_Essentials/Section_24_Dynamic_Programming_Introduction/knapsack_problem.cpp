@@ -1,5 +1,5 @@
 /*
- * Given weights and prices of n items, we need to put a 
+ * Given weights and prices of n items, we need to put a
  * subset of items in a bag of capacity W such that we get
  * the maximum total value in the bag (also known as a knapsack)
  *
@@ -10,7 +10,7 @@
  *  prices = 5, 20, 20, 10
  * output
  *  40 use 2nd and 3rd items (total weight = 10)
- * 
+ *
  *
  * If you have n items, there are 2^n ways to form subsets
  * f(n, w) -> max profit = max(include item, exclude item)
@@ -29,8 +29,7 @@ int knapsack(int weights[], int prices[], int N, int W) {
 
     int include {};
     if (weights[N - 1] <= W) {
-        include = prices[N - 1] +
-            knapsack(weights, prices, N - 1, W - weights[N - 1]);
+        include = prices[N - 1] + knapsack(weights, prices, N - 1, W - weights[N - 1]);
     }
     int exclude = knapsack(weights, prices, N - 1, W);
 
@@ -40,13 +39,13 @@ int knapsack(int weights[], int prices[], int N, int W) {
 // Bottom Up DP
 int knapsackDP(int weights[], int prices[], int N, int W) {
     std::vector<std::vector<int>> dp(N + 1, std::vector<int>(W + 1));
-    for (int n {1}; n <= N; ++n) {
-        for (int w {1}; w <= W; ++w) {
+    for (int n { 1 }; n <= N; ++n) {
+        for (int w { 1 }; w <= W; ++w) {
             int include {};
             if (weights[n - 1] <= w) {
                 include = prices[n - 1] + dp[n - 1][w - weights[n - 1]];
             }
-            int exclude {dp[n - 1][W]};
+            int exclude { dp[n - 1][W] };
             dp[n][w] = std::max(include, exclude);
         }
     }
@@ -54,9 +53,8 @@ int knapsackDP(int weights[], int prices[], int N, int W) {
 }
 
 int main() {
-    int w[] {2, 7, 3, 4};
-    int p[] {5, 20, 20, 10};
+    int w[] { 2, 7, 3, 4 };
+    int p[] { 5, 20, 20, 10 };
     std::cout << knapsack(w, p, 4, 11) << '\n';
     std::cout << knapsackDP(w, p, 4, 11) << '\n';
-    
 }

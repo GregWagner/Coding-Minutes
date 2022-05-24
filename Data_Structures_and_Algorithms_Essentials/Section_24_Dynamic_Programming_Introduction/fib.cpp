@@ -26,8 +26,8 @@ int fib_dp(int n, std::vector<int> dp) {
 int fib_dp1(int n) {
     int first = 0;
     int second = 1;
-    int current {1};
-    for (int i {2}; i <= n; ++i) {
+    int current { 1 };
+    for (int i { 2 }; i <= n; ++i) {
         current = first + second;
         first = second;
         second = current;

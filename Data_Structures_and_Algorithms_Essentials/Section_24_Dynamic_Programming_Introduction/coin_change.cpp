@@ -6,15 +6,15 @@
  * m = 15
  * output = 3 (7 + 7 + 1)
  */
+#include <climits>
 #include <iostream>
 #include <vector>
-#include <climits>
 
 // Bottom Up Approach
 int minNumberOfCoinsForChange(int n, const std::vector<int>& coins) {
     std::vector<int> dp(n + 1, 0);
 
-    for (int i {1}; i <= n; ++i) {
+    for (int i { 1 }; i <= n; ++i) {
         dp[i] = INT_MAX;
 
         for (int c : coins) {
@@ -27,8 +27,7 @@ int minNumberOfCoinsForChange(int n, const std::vector<int>& coins) {
 }
 
 int main() {
-    std::vector<int> a {1, 3, 7, 10};
+    std::vector<int> a { 1, 3, 7, 10 };
     std::cout << minNumberOfCoinsForChange(8, a) << '\n';
     std::cout << minNumberOfCoinsForChange(16, a) << '\n';
 }
-
