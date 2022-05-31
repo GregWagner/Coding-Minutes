@@ -21,19 +21,20 @@
  * 3) Hash table
  *    Can look up in O(1) time
  *    O(n)
- *    Go through the array and for each value check if the needed number
- *    is in the hash table, if not add it and move to the next number
+ *    Go through the array and for each value check if the
+ *    needed number is in the hash table, if not add it
+ *    and move to the next number
  *    Note: creating the hash first may cause a problem if x + x = S
  */
 #include <iostream>
-#include <vector>
 #include <unordered_set>
+#include <vector>
 
-std::vector<int> pairSum(const std::vector<int> &a, int totalSum) {
+std::vector<int> pairSum(const std::vector<int>& a, int totalSum) {
     std::unordered_set<int> hash;
     std::vector<int> results;
 
-    for (auto const value : a) {
+    for (auto const& value : a) {
         // check if the number needed has already been added to the hash
         if (hash.find(totalSum - value) != hash.end()) {
             results.push_back(value);
@@ -46,7 +47,7 @@ std::vector<int> pairSum(const std::vector<int> &a, int totalSum) {
 }
 
 int main() {
-    std::vector<int> a {10, 5, 2, 3, -6, 9, 11};
+    std::vector<int> a { 10, 5, 2, 3, -6, 9, 11 };
     int totalSum = 4;
 
     auto p = pairSum(a, totalSum);
