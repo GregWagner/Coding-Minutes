@@ -15,12 +15,12 @@
  */
 #include <iostream>
 
-std::string isSubsets(const std::string &s1, const std::string &s2) {
+std::string isSubsets(const std::string& s1, const std::string& s2) {
     int i = s1.size() - 1;
     int j = s2.size() - 1;
 
     while (i >= 0 && j >= 0) {
-//      std::cout << "Checking: " << s1[i] << " and " << s2[j] << '\n';
+        //      std::cout << "Checking: " << s1[i] << " and " << s2[j] << '\n';
         if (s1[i] == s2[j]) {
             --j;
         }

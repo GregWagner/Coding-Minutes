@@ -2,7 +2,7 @@
  * Sort Strings
  *
  * Given a list of n strings, each containing digits and spaces, and the number of
- * spaces are the same for each entry, te goal is to implement a varation of the 
+ * spaces are the same for each entry, te goal is to implement a varation of the
  * sort command. None of the strings contain consecutive spaces. Also no strings
  * starts with a space nor ends with one. Spaces are used to divide strings into
  * columns, which can be used as keys in comparisons.
@@ -36,12 +36,12 @@
  * 2) Do the sort
  * 3) Reverse if needed
  */
-#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <iostream>
 #include <sstream>
+#include <vector>
 
-std::string extractStringAtKey(std::string &str, int key) {
+std::string extractStringAtKey(std::string& str, int key) {
     std::stringstream ss(str);
     std::string token;
     while (key--) {
@@ -53,7 +53,7 @@ std::string extractStringAtKey(std::string &str, int key) {
 int main() {
     int n {};
     std::cin >> n;
-    std::cin.get();     // eat the extra /n
+    std::cin.get(); // eat the extra /n
 
     std::vector<std::string> a;
     for (int i {}; i < n; ++i) {
@@ -76,12 +76,12 @@ int main() {
     // sort
     if (ordering == "numeric") {
         std::sort(pairs.begin(), pairs.end(),
-                [](auto const &a, auto const &b) {
-                    return std::stoi(a.second) < std::stoi(b.second);
-                });
+            [](auto const& a, auto const& b) {
+                return std::stoi(a.second) < std::stoi(b.second);
+            });
     } else {
         std::sort(pairs.begin(), pairs.end(),
-                [](auto const &a, auto const &b) { return a.second < b.second; });
+            [](auto const& a, auto const& b) { return a.second < b.second; });
     }
 
     // reverse if needed
@@ -90,7 +90,7 @@ int main() {
     }
 
     // output the strings
-    for (auto const &p : pairs) {
+    for (auto const& p : pairs) {
         std::cout << p.first << '\n';
     }
 }

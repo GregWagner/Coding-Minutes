@@ -2,7 +2,7 @@
  * Space20
  *
  * Given a string, write a function to replace all spaces with the string
- * '%20'. It is given that the string has sufficient space at the end to 
+ * '%20'. It is given that the string has sufficient space at the end to
  * hold the additional characters.
  *
  * Sample Input:
@@ -20,7 +20,7 @@
 #include <cstring>
 #include <iostream>
 
-void replace_space(char *str) {
+void replace_space(char* str) {
     // calcullate the number of spaces
     int spaces {};
     for (int i {}; str[i] != '\0'; ++i) {
@@ -30,10 +30,10 @@ void replace_space(char *str) {
     }
 
     // calculate new string size
-    int index = strlen(str) + 2 * spaces;
+    int index = strlen(str) + (2 * spaces);
     str[index] = '\0';
 
-    for (int i = strlen(str) - 1;  i >= 0; --i) {
+    for (int i = strlen(str) - 1; i >= 0; --i) {
         if (str[i] == ' ') {
             str[index - 1] = '0';
             str[index - 2] = '2';

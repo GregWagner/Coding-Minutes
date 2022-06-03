@@ -35,13 +35,14 @@
 184     Print in range
 192     Remove min/max Code - do homework
 195/196 Nearby Cars
+205     Hashing Code - implement erase() and isPresent()
+207     Webinar - watch this
+221     Topograpical Ordering using BFS (may not be working)
+224/225 Dijkshatra's algorithm
+227     Do top down counting coins
+221/232 Knapsack problem
 
-202     Hashing Code - implement erase() and isPresent()
-204     Webinar - watch this
-220     Topograpical Ordering using BFS (may not be working)
-221/222 Dijkshatra's algorithm
-228/229 Knapsack problem
-230-233 Wines (may be included in next course)
+233-236 Wines (may be included in next course)
 
 Also:
 Redo all the exercises from scratch!!!

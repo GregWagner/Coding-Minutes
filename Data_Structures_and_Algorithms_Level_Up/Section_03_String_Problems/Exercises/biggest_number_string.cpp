@@ -1,6 +1,6 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 bool cmp(int a, int b) {
     std::string a_str = std::to_string(a);
@@ -20,6 +20,6 @@ std::string concatenate(std::vector<int> numbers) {
 }
 
 int main() {
-    std::vector<int> a {10, 11, 20, 30, 3};
+    std::vector<int> a { 10, 11, 20, 30, 3 };
     std::cout << std::boolalpha << (concatenate(a) == "330201110") << '\n';
 }

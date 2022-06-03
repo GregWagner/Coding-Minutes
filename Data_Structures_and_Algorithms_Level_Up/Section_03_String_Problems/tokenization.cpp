@@ -4,10 +4,10 @@
  * Tokenizing a string denotes splitting a string with
  * respect to some delimiter(s) like white space.
  */
-#include <sstream>
-#include <iostream>
-#include <vector>
 #include <cstring>
+#include <iostream>
+#include <sstream>
+#include <vector>
 
 void usingSstream() {
     std::string input;
@@ -21,7 +21,7 @@ void usingSstream() {
         tokens.push_back(token);
     }
 
-    for (auto const &e : tokens) {
+    for (auto const& e : tokens) {
         std::cout << e << ", ";
     }
     std::cout << '\n';
@@ -42,8 +42,8 @@ void usingStrtok() {
     }
 }
 
-char *mystrtok(char *str, char delimiter) {
-    static char* input = nullptr;
+char* mystrtok(char* str, char delimiter) {
+    static char* input {};
     if (str) {
         input = str;
     }
@@ -52,7 +52,7 @@ char *mystrtok(char *str, char delimiter) {
     }
 
     int i {};
-    char *token = new char[strlen(input) + 1];
+    char* token = new char[strlen(input) + 1];
     while (input[i] != '\0') {
         if (input[i] != delimiter) {
             token[i] = input[i];
@@ -70,7 +70,6 @@ char *mystrtok(char *str, char delimiter) {
 }
 
 int main() {
-//  usingSstream();
-   usingStrtok();
-
+    //  usingSstream();
+    usingStrtok();
 }
