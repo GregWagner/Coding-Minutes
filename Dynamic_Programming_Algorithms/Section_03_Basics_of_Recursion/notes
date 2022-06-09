@@ -5,5 +5,6 @@ solutions to smaller instances of the same problem.
 Recursion = Principal of Mathematical Induction
 1) Figure out the smalllest case
 2) Always assumme the subproblem can be soolved
-3) Solve the current problem assumingg the subproblem soution exists
+3) Solve the current problem assuming the subproblem
+   soution exists
 

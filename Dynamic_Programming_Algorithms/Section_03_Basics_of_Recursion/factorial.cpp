@@ -1,5 +1,5 @@
 /*
- * Example 1 
+ * Example 1
  * Compute factorial of a number
  */
 #include <iostream>
