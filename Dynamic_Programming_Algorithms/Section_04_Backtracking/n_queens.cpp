@@ -1,5 +1,5 @@
 /*
- * Place N chees queens on an NxN chessboard
+ * Place N chess queens on an NxN chessboard
  * so that no two queens attack each other.
  *
  * On failure, backtrack to previous row and try next column
@@ -31,8 +31,8 @@ bool validSpot(int n, int board[][20], int x, int y) {
     }
 
     // check left up diagonal
-    int i {x};
-    int j {y};
+    int i { x };
+    int j { y };
     while (i >= 0 && j >= 0) {
         if (board[i][j]) {
             return false;
@@ -54,7 +54,7 @@ bool validSpot(int n, int board[][20], int x, int y) {
     return true;
 }
 
-int countSolveNQueen(int n, int board[][20], int row=0) {
+int countSolveNQueen(int n, int board[][20], int row = 0) {
     // base case (all rows are done)
     if (row == n) {
         return 1;
@@ -74,7 +74,7 @@ int countSolveNQueen(int n, int board[][20], int row=0) {
     return waysToSolve;
 }
 
-bool solveNQueen(int n, int board[][20], int row=0) {
+bool solveNQueen(int n, int board[][20], int row = 0) {
     // base case (all rows are done)
     if (row == n) {
         printBoard(n, board);
@@ -85,6 +85,7 @@ bool solveNQueen(int n, int board[][20], int row=0) {
     for (int col {}; col < n; ++col) {
         if (validSpot(n, board, row, col)) {
             board[row][col] = 1;
+            // check the subproblem
             if (solveNQueen(n, board, row + 1)) {
                 return true;
             }

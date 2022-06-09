@@ -12,7 +12,7 @@
  */
 #include <iostream>
 
-void findSubsets(char *input, char *output, int i=0, int j=0) {
+void findSubsets(char* input, char* output, int i = 0, int j = 0) {
     // base case
     if (input[i] == '\0') {
         output[j] = '\0';
@@ -25,7 +25,7 @@ void findSubsets(char *input, char *output, int i=0, int j=0) {
     // include the ith letter in the output
     output[j] = input[i];
     findSubsets(input, output, i + 1, j + 1);
-   
+
     // backtracking case
     // exclude the ith letter in the output (overwrite output[j])
     findSubsets(input, output, i + 1, j);

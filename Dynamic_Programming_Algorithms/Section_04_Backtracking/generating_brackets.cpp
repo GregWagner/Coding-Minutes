@@ -6,7 +6,7 @@
  */
 #include <iostream>
 
-void generateBrackets(std::string output, int n, int open=0, int close=0, int index=0) {
+void generateBrackets(std::string output, int n, int open = 0, int close = 0, int index = 0) {
     if (index == 2 * n) {
         std::cout << output << '\n';
         return;

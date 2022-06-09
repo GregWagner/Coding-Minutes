@@ -17,7 +17,7 @@ int n {}, m {};
 int visited[N] {};
 bool hamiltonian_path {};
 
-void paths(int current, int count=1) {
+void paths(int current, int count = 1) {
     // base case
     if (count == n) {
         hamiltonian_path = true;
@@ -25,7 +25,7 @@ void paths(int current, int count=1) {
     }
     visited[current] = 1;
 
-    for (const auto &x : graph[current]) {
+    for (const auto& x : graph[current]) {
         if (!visited[x]) {
             paths(x, count + 1);
         }

@@ -26,7 +26,7 @@ int fun(int index, int n, bool previousIndexAOne = false) {
 }
 
 int main() {
-    for (int i {1}; i < 10; ++i) {
+    for (int i { 1 }; i < 10; ++i) {
         std::cout << fun(1, i) << '\n';
     }
 }

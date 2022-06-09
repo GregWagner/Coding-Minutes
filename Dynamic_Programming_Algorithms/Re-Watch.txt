@@ -1,3 +1,7 @@
 13 - Increasing Decreasing Number
 15 - Power function Fast
 16 - Tiling Problem
+22 - Finding Subsets
+27 - Generating Brackets
+37 - Count number of binary bits in sequence of numbers
+
