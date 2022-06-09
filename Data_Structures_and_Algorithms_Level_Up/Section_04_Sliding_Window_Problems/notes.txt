@@ -1,3 +1,5 @@
+Useful for array and string problems
+
 There are 2 types of sliding window problems
 
 Type 1 - Fixed window length k
